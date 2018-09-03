@@ -1,0 +1,32 @@
+// Variables
+$darkGray: #444;
+$lightGray: #ddd;;
+$mainBlue: #4247f3;
+$lightestGray: #C0C0C0;
+
+$demi: 600;
+$book: normal;
+$medium: 500;
+
+// Mixins
+@mixin linkHover {
+    transition: all 0.4s;
+
+    &:hover {
+        color: #888;
+    }
+}
+
+@mixin svgHover {
+    transition: all 0.4s;
+
+    path {
+        transition: all 0.4s;
+    }
+
+    &:hover {
+        path {
+            fill: #ccc;
+        }
+    }
+}

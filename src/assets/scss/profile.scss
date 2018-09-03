@@ -1,0 +1,289 @@
+.profile_wrapper {
+    display: flex;
+    padding-top: 25px;
+
+    @media (max-width: 480px) {
+        flex-wrap: wrap;
+    }
+
+    .personal_information {
+        width: 100%;
+
+        @media (max-width: 480px) {
+            padding-top: 30px;
+        }
+
+        h3 {
+            color: #2e2e2e;
+            font-size: 18px;
+            padding-bottom: 30px;
+        }
+    }
+}
+
+.structure__top_inform {
+
+    @media (max-width: 480px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+    }
+}
+
+.photo {
+    margin-left: 50px;
+
+    @media (max-width: 480px) {
+        margin: 0  auto;
+    }
+
+    .avatar-preview {
+        max-width: 125px;
+        height: auto;
+        padding: 0 80px 20px 0;
+
+        @media (max-width: 480px) {
+            padding-right: 0;
+        }
+
+    }
+
+    .wrapper__upload-delete {
+        max-width: 125px;
+        display: flex;
+        justify-content: space-evenly;
+
+      
+    }
+} 
+
+.profile-flex__mobile {
+    display: none !important;
+
+    @media (max-width: 480px) {
+        display: block !important; 
+    }
+}
+
+.hidden_on_mobile {
+    @media (max-width: 480px) {
+        display: none !important; 
+    }
+}
+
+.mobile-btn {
+    transform: translateX(10px);
+}
+
+#profile-form {
+
+    .save {
+        @media (max-width: 480px) {
+            display: flex;
+            justify-content: center;
+        
+        }
+    }
+
+    .profile-flex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        input:not(.btn) {
+            width: 304px;
+            height: 36px; 
+            color: #9b9b9b;
+            font-size: 12px;
+            letter-spacing: 0.32px;
+            padding-left: 20px;
+            border: none;
+            margin-bottom: 20px;
+
+            @media screen and (min-width: 768px) and (max-width: 1023px) { 
+                width: 195px;
+            }
+
+            @media (max-width: 480px) {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+#profile-verification-form, #profile-IP-form {
+    margin: 65px 0 0 37px;
+
+    @media (max-width: 480px) {
+        margin: 25px 0 0 0;
+    }
+
+    .profile-flex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 91.5%;
+
+        input:not(.btn) {
+            width: 304px;
+            height: 36px;
+            color: #9b9b9b;
+            font-size: 12px;
+            letter-spacing: 0.32px;
+            padding-left: 20px;
+            border: none;
+            margin-bottom: 20px;
+
+            @media screen and (min-width: 1024px) and (max-width: 1366px) { 
+                width: 250px;
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 1023px) { 
+                width: 155px;
+            }
+
+            @media (max-width: 480px) {
+                width: 100%;
+            }
+
+        }
+    }
+}
+
+.form-group-first_name, .form-group-last_name {
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+}
+
+.save {
+    width: 120px;
+    height: 36px;
+    border-radius: 6px;
+    background-color: #4247f3;
+    color: #fff;
+    font-size: 12px;
+    margin: 30px auto 35px auto;
+    border: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+ 
+.personal-top {
+    display: flex;
+
+    @media (max-width: 480px) {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+}
+
+.passportAndSelfie {
+    width: 50%;
+    margin-top: 32px;
+
+    @media (max-width: 480px) {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+
+    h3 {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+}
+
+.wrapperUpload {
+    display: flex;
+
+    .upload_photo_wrap {
+        width: 100%;
+        padding-left: 37px;
+
+        @media (max-width: 480px) {
+            width: 50%;
+            padding-left: 0;
+        }
+
+        .passport, .selfie {
+            font-size: 14px;
+            margin-top: 15px;
+
+            @media (max-width: 480px) {
+                text-align: center;
+                width: 85%;
+            }
+        }
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.safeAndPasswoord {
+    position: absolute;
+    top: -45px;
+
+    @media (max-width: 480px) {
+        display: none;
+    }
+}
+
+.support__item__content .profile-safe-title {
+    margin-left: 37px;
+
+    @media (max-width: 480px) {
+        margin-left: 0;
+    }
+}
+
+
+.showInfo__visible  .item__content__history {
+    padding: 37px 25px 25px 37px;
+}
+
+.history-table {
+    width: 100%;
+    font-size: 14px;
+
+    @media (max-width: 430px) {
+        font-size: 12px;
+    }
+
+    thead td {
+        padding-bottom: 35px;
+    }
+
+    tbody td {
+        padding: 20px 0;
+    }
+
+
+    td {
+        width: 1%;
+        text-align: center;
+
+        @media (max-width: 430px) {
+            width: calc(100%/3);
+        }
+    }
+
+    tbody tr:nth-child(odd) td {
+        background: #fff;
+        border-radius: 4px;
+    }
+}

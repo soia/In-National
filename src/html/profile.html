@@ -1,0 +1,376 @@
+@@include('modules/html-head.html',{ "bodyClass": "support_body", "pageTitle": "Профиль" }) @@include('modules/header.html',{
+"headerClass": "" })
+<div class="wrap">
+    <main class="aside_visible main__stores support__main">
+        <section class="main__section support__main__section">
+            <article class="main__section__item main__section__item__col_1-4 support__item showInfo showInfo__visible">
+                <header class="support__item__header">
+                    <h4>Account details</h4>
+                    <div class="hideInfo">
+                        <svg width="18px" height="18px" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g id="dashboard" stroke="none" stroke-width="1" fill="#4247f3" fill-rule="evenodd">
+                                <g id="store" transform="translate(-43.000000, -41.000000)" fill="#4247f3">
+                                    <g id="menu">
+                                        <g id="Menu" transform="translate(43.000000, 41.000000)">
+                                            <path d="M-1.54440959,8.38375162 L20.8590523,8.38375162 C21.3177747,8.38375162 21.6896427,8.75561961 21.6896427,9.21434203 L21.6896427,9.21434203 C21.6896427,9.67306445 21.3177747,10.0449324 20.8590523,10.0449324 L-1.54440959,10.0449324 C-2.00313201,10.0449324 -2.375,9.67306445 -2.375,9.21434203 L-2.375,9.21434203 C-2.375,8.75561961 -2.00313201,8.38375162 -1.54440959,8.38375162 Z"
+                                                id="Rectangle" transform="translate(9.657321, 9.214342) rotate(-315.000000) translate(-9.657321, -9.214342) "></path>
+                                            <path d="M-1.54440959,8.38375162 L20.8590523,8.38375162 C21.3177747,8.38375162 21.6896427,8.75561961 21.6896427,9.21434203 L21.6896427,9.21434203 C21.6896427,9.67306445 21.3177747,10.0449324 20.8590523,10.0449324 L-1.54440959,10.0449324 C-2.00313201,10.0449324 -2.375,9.67306445 -2.375,9.21434203 L-2.375,9.21434203 C-2.375,8.75561961 -2.00313201,8.38375162 -1.54440959,8.38375162 Z"
+                                                id="Rectangle" transform="translate(9.657321, 9.214342) rotate(-45.000000) translate(-9.657321, -9.214342) "></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="drop_icon">
+                        <svg width="18px" height="18px" viewBox="0 0 18 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g id="Symbols" stroke="none" stroke-width="1" fill="#4247f3" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                                <g id="ic_down" transform="translate(-3.000000, -8.000000)" stroke="#4247f3">
+                                    <g transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) " id="ic_back">
+                                        <g>
+                                            <g id="back" transform="translate(8.000000, 4.000000)">
+                                                <path d="M8,0 L0,8" id="Line"></path>
+                                                <path d="M0,8 L8,16" id="Line"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </header>
+                <section class="support__item__content">
+                    <div class="profile_wrapper">
+                        <div class="photo">
+                            <div class="img">
+                                <img src="./assets/img/none_photo.png" alt="avatar-preview" class="avatar-preview">
+                                <form id="" enctype="multipart/form-data" method="post">
+                                    <input type="file" id="file-input" name="photo_file" style="display: none;" accept=".jpg">
+                                </form>
+                            </div>
+                            <div class="wrapper__upload-delete">
+                                <a href="#" class="photo-change"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
+                                        <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+                                        <title>upload</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs/>
+                                        <g id="xicon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="icon" transform="translate(1.000000, 2.000000)" fill="#979797">
+                                                <path d="M17.9183781,10.4506105 C17.9538282,10.5371492 17.9713522,10.6285976 17.9711156,10.7199151 L17.9711156,15.1530876 C17.9711156,15.5613048 17.6216597,15.8922302 17.1905839,15.8922302 C16.7595081,15.8922302 16.4100521,15.5613048 16.4100521,15.1530876 L16.4100521,12.4268474 L14.1209741,14.4634163 C12.2263987,16.2584269 9.49181907,17.0074635 6.87788796,16.4473907 C4.26395685,15.8873179 2.13623981,14.0964636 1.24219996,11.7039516 C1.0983947,11.3191188 1.31125526,10.8967548 1.71763732,10.7605751 C2.12401939,10.6243954 2.57003434,10.8259686 2.7138396,11.2108014 C3.42907148,13.124811 5.13124511,14.5574945 7.22239,15.0055527 C9.3135349,15.4536109 11.5011986,14.8543817 13.0344266,13.4022425 L15.220094,11.4573747 L12.5073933,11.4573747 C12.0763175,11.4573747 11.7268615,11.1264493 11.7268615,10.7182321 C11.7268615,10.3100149 12.0763175,9.97908954 12.5073933,9.97908954 L17.1905839,9.97908954 C17.5182565,9.97908954 17.7987696,10.1702962 17.9144905,10.4413144 L17.9183781,10.4506105 Z"
+                                                    id="Combined-Shape" />
+                                                <path d="M0.0188874152,6.28008486 L0.0188874152,1.84691236 C0.0188874152,1.43869518 0.36834339,1.10776978 0.79941918,1.10776978 C1.23049497,1.10776978 1.57995094,1.43869518 1.57995094,1.84691236 L1.57995094,4.57315259 L3.86902898,2.53658372 C5.76360433,0.741573056 8.49818399,-0.00746347893 11.1121151,0.552609291 C13.7260462,1.11268206 15.8537633,2.9035364 16.7478031,5.29604845 C16.8916084,5.6808812 16.6787478,6.10324522 16.2723657,6.23942489 C15.8659837,6.37560456 15.4199687,6.1740314 15.2761635,5.78919865 C14.5609316,3.87518901 12.8587579,2.44250554 10.7676131,1.99444732 C8.67646816,1.54638911 6.48880444,2.14561834 4.95557645,3.59775754 L2.76990907,5.54262529 L5.48260977,5.54262529 C5.91368556,5.54262529 6.26314153,5.8735507 6.26314153,6.28176787 C6.26314153,6.68998505 5.91368556,7.02091046 5.48260977,7.02091046 L0.79941918,7.02091046 C0.471746606,7.02091046 0.19123346,6.82970379 0.0755125833,6.55868559 C0.0361748312,6.46285083 0.0186508493,6.37140244 0.0188874152,6.28008486 Z"
+                                                    id="Combined-Shape" />
+                                            </g>
+                                        </g>
+                                    </svg></a>
+
+                                <a href="#" class="remove-avatar"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
+                                        <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+                                        <title>delete</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs/>
+                                        <g id="x" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Group-14" transform="translate(1.000000, 1.000000)" fill="#979797" fill-rule="nonzero">
+                                                <path d="M0.947368421,0.947368421 L0.947368421,0.947368421 C1.3173388,0.577398039 1.91717931,0.577398039 2.28714969,0.947368421 L16.9238112,15.5840299 C17.2937816,15.9540003 17.2937816,16.5538408 16.9238112,16.9238112 L16.9238112,16.9238112 C16.5538408,17.2937816 15.9540003,17.2937816 15.5840299,16.9238112 L0.947368421,2.28714969 C0.577398039,1.91717931 0.577398039,1.3173388 0.947368421,0.947368421 Z"
+                                                    id="Path-4" transform="translate(8.935590, 8.935590) scale(-1, 1) translate(-8.935590, -8.935590) "
+                                                />
+                                                <path d="M0.947368421,0.947368421 L0.947368421,0.947368421 C1.3173388,0.577398039 1.91717931,0.577398039 2.28714969,0.947368421 L16.9238112,15.5840299 C17.2937816,15.9540003 17.2937816,16.5538408 16.9238112,16.9238112 L16.9238112,16.9238112 C16.5538408,17.2937816 15.9540003,17.2937816 15.5840299,16.9238112 L0.947368421,2.28714969 C0.577398039,1.91717931 0.577398039,1.3173388 0.947368421,0.947368421 Z"
+                                                    id="Path-4" />
+                                            </g>
+                                        </g>
+                                    </svg></a>
+                            </div>
+                        </div>
+                        <div class="personal_information">
+                            <form id="profile-form" action="#" method="post">
+                                <h3>Personal information</h3>
+                                <div class="profile-flex">
+                                    <div class="form-group-first_name">
+                                        <input type="text" id="" name="" value="" placeholder="Your name">
+                                    </div>
+                                    <div class="form-group-first_name">
+                                        <input type="text" id="" name="" value="" placeholder="Your name">
+                                    </div>
+                                </div>
+                                <div class="profile-flex">
+                                    <div class="form-group-last_name">
+                                        <input type="text" id="" name="" value="" placeholder="Last name">
+                                    </div>
+                                    <div class="form-group-last_name">
+                                        <input type="text" id="" name="" value="" placeholder="Last name">
+                                    </div>
+                                </div>
+                                <div class="profile-flex">
+                                    <div class="form-group-last_name">
+                                        <input type="text" id="" name="" value="" placeholder="Last name">
+                                    </div>
+                                    <div class="form-group-last_name">
+                                        <input type="text" id="" name="" value="" placeholder="Last name">
+                                    </div>
+                                </div>
+                                <input type="submit" value="Сохранить" class="save">
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <article class="main__section__item main__section__item__col_1-4 support__item showInfo transparent">
+                <header class="support__item__header">
+                    <h4>Verification</h4>
+                    <div class="hideInfo">
+                        <svg width="18px" height="18px" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g id="dashboard" stroke="none" stroke-width="1" fill="#4247f3" fill-rule="evenodd">
+                                <g id="store" transform="translate(-43.000000, -41.000000)" fill="#4247f3">
+                                    <g id="menu">
+                                        <g id="Menu" transform="translate(43.000000, 41.000000)">
+                                            <path d="M-1.54440959,8.38375162 L20.8590523,8.38375162 C21.3177747,8.38375162 21.6896427,8.75561961 21.6896427,9.21434203 L21.6896427,9.21434203 C21.6896427,9.67306445 21.3177747,10.0449324 20.8590523,10.0449324 L-1.54440959,10.0449324 C-2.00313201,10.0449324 -2.375,9.67306445 -2.375,9.21434203 L-2.375,9.21434203 C-2.375,8.75561961 -2.00313201,8.38375162 -1.54440959,8.38375162 Z"
+                                                id="Rectangle" transform="translate(9.657321, 9.214342) rotate(-315.000000) translate(-9.657321, -9.214342) "></path>
+                                            <path d="M-1.54440959,8.38375162 L20.8590523,8.38375162 C21.3177747,8.38375162 21.6896427,8.75561961 21.6896427,9.21434203 L21.6896427,9.21434203 C21.6896427,9.67306445 21.3177747,10.0449324 20.8590523,10.0449324 L-1.54440959,10.0449324 C-2.00313201,10.0449324 -2.375,9.67306445 -2.375,9.21434203 L-2.375,9.21434203 C-2.375,8.75561961 -2.00313201,8.38375162 -1.54440959,8.38375162 Z"
+                                                id="Rectangle" transform="translate(9.657321, 9.214342) rotate(-45.000000) translate(-9.657321, -9.214342) "></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="drop_icon">
+                        <svg width="18px" height="18px" viewBox="0 0 18 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g id="Symbols" stroke="none" stroke-width="1" fill="#4247f3" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                                <g id="ic_down" transform="translate(-3.000000, -8.000000)" stroke="#4247f3">
+                                    <g transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) " id="ic_back">
+                                        <g>
+                                            <g id="back" transform="translate(8.000000, 4.000000)">
+                                                <path d="M8,0 L0,8" id="Line"></path>
+                                                <path d="M0,8 L8,16" id="Line"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </header>
+                <section class="support__item__content">
+                    <div class="personal-top">
+                        <form action="" class="main__section__item__form ">
+                            <div class="wrapperUpload">
+                                <div class="upload_photo_wrap">
+                                    <div id="uploadPhoto">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                            x="0px" y="0px" viewBox="0 0 52 52" style="enable-background:new 0 0 52 52;" xml:space="preserve">
+                                            <g>
+                                                <path fill="#D8D8D8" d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26   S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path>
+                                                <path fill="#D8D8D8" d="M38.5,25H27V14c0-0.553-0.448-1-1-1s-1,0.447-1,1v11H13.5c-0.552,0-1,0.447-1,1s0.448,1,1,1H25v12c0,0.553,0.448,1,1,1   s1-0.447,1-1V27h11.5c0.552,0,1-0.447,1-1S39.052,25,38.5,25z"></path>
+                                            </g>
+                                        </svg>
+                                        <span>Upload photo</span>
+                                        <input type="file" name="" id="upload">
+                                        <img src="" alt="" id="uploadedImage">
+                                    </div>
+                                    <p class="passport">паспорт</p>
+                                </div>
+                                <div class="upload_photo_wrap">
+                                    <div id="uploadPhotoSecond">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                            x="0px" y="0px" viewBox="0 0 52 52" style="enable-background:new 0 0 52 52;" xml:space="preserve">
+                                            <g>
+                                                <path fill="#D8D8D8" d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26   S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path>
+                                                <path fill="#D8D8D8" d="M38.5,25H27V14c0-0.553-0.448-1-1-1s-1,0.447-1,1v11H13.5c-0.552,0-1,0.447-1,1s0.448,1,1,1H25v12c0,0.553,0.448,1,1,1   s1-0.447,1-1V27h11.5c0.552,0,1-0.447,1-1S39.052,25,38.5,25z"></path>
+                                            </g>
+                                        </svg>
+                                        <span>Upload photo</span>
+                                        <input type="file" name="" id="uploadSecond">
+                                        <img src="" alt="" id="uploadedImageSecond">
+
+                                    </div>
+                                    <p class="selfie">селфи</p>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="passportAndSelfie">
+                            <h3>Passport and selfie</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                                mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat
+                                massa quis enim. </p>
+                        </div>
+                    </div>
+                    <h3 class="profile-safe-title">Безопасность</h3>
+
+                    <form id="profile-verification-form" action="#" method="post">
+                        <div class="profile-flex">
+                            <div class="form-group-first_name relative">
+                                <input type="password" id="" name="" value="" placeholder="Новый пароль">
+                                <p class="safeAndPasswoord">Пароль</p>
+                            </div>
+                            <div class="form-group-first_name relative">
+                                <input type="password" id="" name="" value="" placeholder="Новый пароль">
+                                <p class="safeAndPasswoord">Повторите</p>
+                            </div>
+                        </div>
+                        <div class="profile-flex profile-flex__mobile">
+                            <div class="form-group-last_name">
+                                <input type="password" id="" name="" value="" placeholder="Повторите новый пароль">
+                                <input type="submit" value="Обновить" class="save btn mobile-btn">
+                            </div>
+                        </div>
+                        <div class="profile-flex">
+                            <div class="form-group-last_name">
+                                <input type="password" id="" name="" value="" placeholder="Новый пароль">
+                            </div>
+                            <div class="form-group-last_name">
+                                <input type="password" id="" name="" value="" placeholder="Новый пароль">
+                            </div>
+                        </div>
+                        <div class="profile-flex">
+                            <div class="form-group-last_name hidden_on_mobile">
+                                <input type="password" id="" name="" value="" placeholder="Повторите новый пароль">
+                                <input type="submit" value="Обновить" class="save btn">
+                            </div>
+                            <div class="form-group-last_name">
+                                <input type="password" id="" name="" value="" placeholder="Повторите новый пароль">
+                                <input type="submit" value="Сохранить" class="save btn mobile-btn">
+                            </div>
+                        </div>
+
+
+                    </form>
+                    <form id="profile-IP-form" action="#" method="post">
+                        <div class="profile-flex">
+                            <div class="form-group-first_name relative">
+                                <input type="text" readonly="readonly" id="" name="" value="" placeholder="Ваш IP">
+                                <p class="safeAndPasswoord">IP Безопасность</p>
+                            </div>
+                            <div class="form-group-first_name relative">
+                                <input type="number" readonly="readonly" id="" name="" value="" placeholder="193.111.49.67">
+                                <p class="safeAndPasswoord">Белый список</p>
+                            </div>
+                        </div>
+                </section>
+            </article>
+
+            <article class="main__section__item main__section__item__col_1-4 support__item showInfo transparent">
+                <header class="support__item__header">
+                    <h4>History</h4>
+                    <div class="hideInfo">
+                        <svg width="18px" height="18px" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g id="dashboard" stroke="none" stroke-width="1" fill="#4247f3" fill-rule="evenodd">
+                                <g id="store" transform="translate(-43.000000, -41.000000)" fill="#4247f3">
+                                    <g id="menu">
+                                        <g id="Menu" transform="translate(43.000000, 41.000000)">
+                                            <path d="M-1.54440959,8.38375162 L20.8590523,8.38375162 C21.3177747,8.38375162 21.6896427,8.75561961 21.6896427,9.21434203 L21.6896427,9.21434203 C21.6896427,9.67306445 21.3177747,10.0449324 20.8590523,10.0449324 L-1.54440959,10.0449324 C-2.00313201,10.0449324 -2.375,9.67306445 -2.375,9.21434203 L-2.375,9.21434203 C-2.375,8.75561961 -2.00313201,8.38375162 -1.54440959,8.38375162 Z"
+                                                id="Rectangle" transform="translate(9.657321, 9.214342) rotate(-315.000000) translate(-9.657321, -9.214342) "></path>
+                                            <path d="M-1.54440959,8.38375162 L20.8590523,8.38375162 C21.3177747,8.38375162 21.6896427,8.75561961 21.6896427,9.21434203 L21.6896427,9.21434203 C21.6896427,9.67306445 21.3177747,10.0449324 20.8590523,10.0449324 L-1.54440959,10.0449324 C-2.00313201,10.0449324 -2.375,9.67306445 -2.375,9.21434203 L-2.375,9.21434203 C-2.375,8.75561961 -2.00313201,8.38375162 -1.54440959,8.38375162 Z"
+                                                id="Rectangle" transform="translate(9.657321, 9.214342) rotate(-45.000000) translate(-9.657321, -9.214342) "></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="drop_icon">
+                        <svg width="18px" height="18px" viewBox="0 0 18 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g id="Symbols" stroke="none" stroke-width="1" fill="#4247f3" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                                <g id="ic_down" transform="translate(-3.000000, -8.000000)" stroke="#4247f3">
+                                    <g transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) " id="ic_back">
+                                        <g>
+                                            <g id="back" transform="translate(8.000000, 4.000000)">
+                                                <path d="M8,0 L0,8" id="Line"></path>
+                                                <path d="M0,8 L8,16" id="Line"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </header>
+                <section class="support__item__content item__content__history">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <td>Страна</td>
+                                <td>Дата</td>
+                                <td>IP Адрес</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Украина</td>
+                                <td>25.08.2018</td>
+                                <td>193.111.49.67</td>
+                            </tr>
+                            <tr>
+                                <td>Украина</td>
+                                <td>25.08.2018</td>
+                                <td>193.111.49.67</td>
+                            </tr>
+                            <tr>
+                                <td>Украина</td>
+                                <td>25.08.2018</td>
+                                <td>193.111.49.67</td>
+                            </tr>
+                            <tr>
+                                <td>Украина</td>
+                                <td>25.08.2018</td>
+                                <td>193.111.49.67</td>
+                            </tr>
+                            <tr>
+                                <td>Украина</td>
+                                <td>25.08.2018</td>
+                                <td>193.111.49.67</td>
+                            </tr>
+                            <tr>
+                                <td>Украина</td>
+                                <td>25.08.2018</td>
+                                <td>193.111.49.67</td>
+                            </tr>
+                            <tr>
+                                <td>Украина</td>
+                                <td>25.08.2018</td>
+                                <td>193.111.49.67</td>
+                            </tr>
+                            <tr>
+                                <td>Украина</td>
+                                <td>25.08.2018</td>
+                                <td>193.111.49.67</td>
+                            </tr>
+                            <tr>
+                                <td>Украина</td>
+                                <td>25.08.2018</td>
+                                <td>193.111.49.67</td>
+                            </tr>
+                            <tr>
+                                <td>Украина</td>
+                                <td>25.08.2018</td>
+                                <td>193.111.49.67</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+        </section>
+    </main>
+</div>
+@@include('modules/html-footer.html')

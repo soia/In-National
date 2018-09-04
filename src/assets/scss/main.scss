@@ -884,10 +884,6 @@ main {
 
 .wrapper__pagination {
     background: #f8f8f8;
-
-    @media (max-width: 480px) {
-        display: none;
-    }
 }
 
 .pagination {

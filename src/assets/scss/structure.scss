@@ -203,9 +203,14 @@
 
 }
 
-.structure__custom__table__row:nth-child(even) {
-    background-color: #ffffff;
-    border-radius: 10px;
+.structure__custom__table__row {
+    margin: 0 40px 0 40px;
+    overflow-x: hidden;
+
+    &:nth-child(even) {
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
 }
 
 

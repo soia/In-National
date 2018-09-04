@@ -274,41 +274,52 @@ $('.remove-avatar').on('click', function (e) {
 
 // slick slider
 $(document).ready(function () {
-  $('.autoplay').slick({
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1366,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1
+  $('.autoplay').each(function(index, item) {
+    var slidesToShow = 5;
+    var childElements = $(item).children().length;
+    console.log(childElements)
+    if (slidesToShow > (childElements)) {
+      slidesToShow = (childElements);
+    }
+  
+    $(item).slick({
+      infinite: true,
+      slidesToShow: slidesToShow,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1366,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 1023,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 1022,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
         }
-      },
-      {
-        breakpoint: 1023,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 1022,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
+      ]
+  
+    });
+  })
+  
 });
 
 $(document).ready(function () {
@@ -316,7 +327,7 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows : false,
+    arrows: false,
     responsive: [
       {
         breakpoint: 480,

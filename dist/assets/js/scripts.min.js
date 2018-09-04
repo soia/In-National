@@ -319,10 +319,7 @@ $(document).ready(function () {
   
     });
   })
-  
-});
 
-$(document).ready(function () {
   $('.mobile-table-slick').slick({
     infinite: true,
     slidesToShow: 1,

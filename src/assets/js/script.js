@@ -190,10 +190,10 @@
 
         $("#uploadSecond").change(function () {
           readURL(this);
-          $("#uploadPhotosecond")
+          $("#uploadPhotoSecond")
             .find("svg")
             .hide();
-          $("#uploadPhotosecond")
+          $("#uploadPhotoSecond")
             .find("span")
             .hide();
         });

@@ -310,3 +310,20 @@ $(document).ready(function () {
     ]
   });
 });
+
+$(document).ready(function () {
+  $('.mobile-table-slick').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows : false,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          dots: true
+        }
+      }
+    ]
+  });
+});

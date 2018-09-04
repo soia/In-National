@@ -177,6 +177,25 @@
     }
 }
 
+.faq-table, .finance-table {
+    @media (max-width: 480px) {
+        display: none;
+    }
+}
+
+.mobile__table__row__faq {
+    padding: 20px 0;
+
+    &:nth-child(even) {
+        background: #fff;
+    }
+}
+
+
 .main__stores .main__section .transparent > .diabledQuestion {
+    display: none;
+}
+
+.main__stores .main__section .transparent > .popular-questions {
     display: none;
 }

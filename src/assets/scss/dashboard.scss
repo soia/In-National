@@ -1,0 +1,126 @@
+.main__section__dashboard {
+    display: block;
+}
+
+.dashboard {
+    
+
+    &_list {
+        margin-left: 0;
+        margin-bottom: 0;
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) { 
+            margin-top: 0;
+        }
+
+        @media (max-width: 480px) {
+            margin-top: 0;
+        }
+
+        li {
+            width: 291px;
+            height: 176px;
+            border-radius: 5px;
+            background-color: #e3e3e3;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 20px 0 45px;
+
+            @media screen and (min-width: 768px) and (max-width: 1024px) { 
+                padding: 0 20px 0 20px;
+                align-items: center;
+                width: 100%;
+            }
+
+            @media (max-width: 480px) {
+                padding: 0 20px 0 20px;
+                align-items: center;
+                width: 100%;
+            }
+    
+            &:hover > div {
+                color: #fff;
+            }
+
+            &:hover .dashboard__checkbox input[type=checkbox] + label:before {
+                border: 1px solid #fff;
+            }
+
+            &:hover input[type=checkbox]:checked + label:before {
+                color: #fff;
+            }
+            
+            &:hover label{
+                color: #fff;
+            }
+    
+            .dashboard_h3 {
+                margin-bottom: 20px;
+                font-size: 14px;
+
+
+            }
+    
+            .balance_info {
+                font-size: 30px;
+            }
+    
+            .dashboard_h3, .balance_info {
+                color: #4a4a4a;
+                font-weight: 400;
+            }
+        }
+
+        &__bottom {
+            margin-top: 20px;
+        }
+
+        .dashboard__checkbox {
+            margin-bottom: 10px;
+
+            @media (max-width: 480px) {
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+            }
+
+            label {
+                color: #9b9b9b;
+            }
+
+            input[type=checkbox]:checked + label {
+                color: #4a4a4a;
+            }
+
+            input[type=checkbox] {
+                display: none;
+            }
+        
+            input[type=checkbox] + label:before {
+                content: "\2713";
+                color: transparent;
+                display: inline-block;
+                border: 1px solid #9b9b9b;
+                font-size: 17px;
+                line-height: 11px;
+                margin: -5px 12px 0px 0;
+                height: 12px;
+                width: 12px;
+                text-align: center;
+                vertical-align: middle;
+                transition: all 0.4s;
+            }
+
+            input[type=checkbox]:checked + label:before {
+                
+                border: 1px solid #4348f4;
+            }
+            
+            input[type=checkbox]:checked + label:before {
+                color: #4348f4;
+            }
+        }
+    } 
+}

@@ -76,13 +76,70 @@
     transform: translateX(10px);
 }
 
+
+.clipBoard {
+    width: 324px;
+    position: relative;
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) { 
+        width: 215px;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+
+    .clipInput {
+        width: 304px;
+        height: 36px;
+        color: #9b9b9b;
+        font-size: 12px;
+        letter-spacing: 0.32px;
+        padding-left: 20px;
+        border: none;
+
+        @media (max-width: 480px) {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        @media screen and (min-width: 768px) and (max-width: 1023px) { 
+            width: 195px;
+        }
+    }
+
+    .copyButton {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 45px;
+        cursor: pointer;
+        background-image: linear-gradient(#fcfcfc,#eee);
+        border: 1px solid #d5d5d5;
+        border-radius: 3px;
+        user-select: none;
+
+        .clippy {
+            width: 15px;
+            position: relative;
+            top: 3px;
+        }
+    }
+}
+
+
 .profile-form {
+    width: 50%;
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
 
     .save {
         @media (max-width: 480px) {
             display: flex;
             justify-content: center;
-        
         }
     }
 
@@ -113,8 +170,9 @@
     }
 }
 
-#profile-verification-form, #profile-IP-form {
+.verification-form, .ip-form{
     margin: 65px 0 0 37px;
+    display: none;
 
     @media (max-width: 480px) {
         margin: 25px 0 0 0;
@@ -180,18 +238,17 @@ input[type=number]::-webkit-outer-spin-button {
 
     @media (max-width: 480px) {
         flex-wrap: wrap;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 }
 
 .passportAndSelfie {
     width: 50%;
-    margin-top: 32px;
+    margin: 0 0 50px 37px;
 
     @media (max-width: 480px) {
         width: 100%;
-        margin-top: 0;
-        margin-bottom: 30px;
+        margin: 0 0 30px 0;
     }
 
 
@@ -244,10 +301,28 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .support__item__content .profile-safe-title {
-    margin-left: 37px;
+    margin-bottom: 15px;
+    text-align: center;
 
     @media (max-width: 480px) {
         margin-left: 0;
+        text-align: left;
+    }
+}
+
+.safity_wrapper {
+    flex-direction: column;
+
+    .btn {
+        margin-top: 0 !important;
+    }
+
+    div {
+        margin: 0 auto;
+
+        @media (max-width: 480px) {
+            margin: 0;
+        }
     }
 }
 

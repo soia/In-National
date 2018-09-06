@@ -275,27 +275,17 @@
                                 <h3>Personal information</h3>
                                 <div class="profile-flex">
                                     <div class="form-group-first_name">
-                                        <input type="text" id="#" name="" value="" placeholder="Your name">
-                                    </div>
-                                    <div class="form-group-first_name">
-                                        <input type="text" id="#" name="" value="" placeholder="Your name">
-                                    </div>
-                                </div>
-                                <div class="profile-flex">
-                                    <div class="form-group-last_name">
-                                        <input type="text" id="#" name="" value="" placeholder="Last name">
+                                        <input type="text" id="#" name="" value="" placeholder="First name">
                                     </div>
                                     <div class="form-group-last_name">
                                         <input type="text" id="#" name="" value="" placeholder="Last name">
                                     </div>
                                 </div>
-                                <div class="profile-flex">
-                                    <div class="form-group-last_name">
-                                        <input type="text" id="#" name="" value="" placeholder="Last name">
-                                    </div>
-                                    <div class="form-group-last_name">
-                                        <input type="text" id="#" name="" value="" placeholder="Last name">
-                                    </div>
+                                <div class="clipBoard">
+                                    <input type="text" class="clipInput" id="copyTarget" value="Referral link">
+                                    <button type="button" class="copyButton" id="copyButton">
+                                        <img class="clippy" src="./assets/img/clippy.svg" alt="Скопировать в буфер обмена">
+                                    </button>
                                 </div>
                                 <input type="submit" value="Сохранить" class="save">
                             </form>
@@ -348,7 +338,7 @@
                 </header>
                 <section class="support__item__content">
                     <div class="personal-top">
-                        <form action="" class="main__section__item__form ">
+                        <form action="#" class="main__section__item__form ">
                             <div class="wrapperUpload">
                                 <div class="upload_photo_wrap">
                                     <div id="uploadPhoto">
@@ -383,17 +373,32 @@
                                 </div>
                             </div>
                         </form>
-                        <div class="passportAndSelfie">
-                            <h3>Passport and selfie</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-                                mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat
-                                massa quis enim. </p>
-                        </div>
+                        <form id="#" class="profile-form" action="#" method="post">
+                            <h3 class="profile-safe-title">Безопасность</h3>
+                            <div class="profile-flex safity_wrapper">
+                                <div class="form-group-password">
+                                    <input type="password" id="#" name="" value="" placeholder="Старый пароль">
+                                </div>
+                                <div class="form-group-password">
+                                    <input type="password" id="#" name="" value="" placeholder="Новый пароль">
+                                </div>
+                                <div class="form-group-password">
+                                    <input type="password" id="#" name="" value="" placeholder="Повторите новый пароль">
+                                </div>
+                                <div class="form-group-password">
+                                    <input type="submit" value="Обновить" class="save btn mobile-btn">
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <h3 class="profile-safe-title">Безопасность</h3>
-
-                    <form id="profile-verification-form" action="#" method="post">
+                    <div class="passportAndSelfie">
+                        <h3>Passport and selfie</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                            massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis
+                            enim. </p>
+                    </div>
+                    <form id="profile-verification-form" class="verification-form" action="#" method="post">
                         <div class="profile-flex">
                             <div class="form-group-first_name relative">
                                 <input type="password" id="#" name="" value="" placeholder="Новый пароль">
@@ -404,6 +409,7 @@
                                 <p class="safeAndPasswoord">Повторите</p>
                             </div>
                         </div>
+
                         <div class="profile-flex profile-flex__mobile">
                             <div class="form-group-last_name">
                                 <input type="password" id="#" name="" value="" placeholder="Повторите новый пароль">
@@ -428,10 +434,8 @@
                                 <input type="submit" value="Сохранить" class="save btn mobile-btn">
                             </div>
                         </div>
-
-
                     </form>
-                    <form id="profile-IP-form" action="#" method="post">
+                    <form id="profile-IP-form" class="ip-form" action="#" method="post">
                         <div class="profile-flex">
                             <div class="form-group-first_name relative">
                                 <input type="text" readonly="readonly" id="#" name="" value="" placeholder="Ваш IP">

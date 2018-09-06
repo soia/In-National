@@ -1,8 +1,7 @@
-#w0 {
+.finance__wallet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 392px;
 
     @media (max-width: 430px) {
         margin-left: 0;
@@ -11,7 +10,7 @@
         margin-left: 0 !important;
     }
 
-    .finanse_h3 {
+    .finanse_h3__btc, .finanse_h3__eth {
         font-size: 14px;
 
         @media (max-width: 430px) {
@@ -20,24 +19,11 @@
     }
 }
 
-#user-btc_wallet {
-    border: none;
-    text-align: right;
-    font-size: 14px;
-    background-color: #f8f8f8;
-
-    @media (max-width: 430px) {
-        text-align: left;
-        padding-top: 20px;
-        font-size: 12px;
-    }
-}
-
 .underline {
     margin-top: 10px;
-    max-width: 392px;
     border: 2px solid #000;
     opacity: 0.15;
+    margin-bottom: 35px;
 
     @media (max-width: 430px) {
         margin-left: 0 !important;
@@ -53,6 +39,10 @@
 
     @media (max-width: 430px) {
         margin-left: 0 !important;
+    }
+
+    &__first__block {
+        margin-top: 0;
     }
 
     li {
@@ -96,15 +86,104 @@
     
 }
 
-#w0, .underline, .finance__list, .support__item__header, .finance-table  {
+.refil, .conclusion {
+    margin:  50px 0 25px 0 !important;
+}
+
+.wrapper-refil-conclusion {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 37px;
+
+    @media (max-width: 480px) {
+        margin-left: 0;
+        flex-direction: column;
+    }
+}
+
+
+.refil-form, .conclusion-form {
+    margin: 0 0 70px 0;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 480px) {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    
+
+
+    &__submit {
+        width: 120px;
+        height: 36px;
+        border-radius: 6px;
+        background-color: #4247f3;
+        color: #fff;
+        font-size: 12px;
+        margin: 30px auto 35px auto;
+        border: none;
+    }
+
+    &__select {
+        width: 304px;
+        height: 36px;
+        color: #9b9b9b;
+        font-size: 12px;
+        letter-spacing: 0.32px;
+        padding-left: 20px;
+        border: none;
+        margin-bottom: 35px;
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) { 
+            width: 200px;
+        }
+
+        @media (max-width: 480px) {
+            width: 100%;
+        }
+    }
+
+    &__input {
+        width: 304px;
+        height: 36px;
+        color: #9b9b9b;
+        font-size: 12px;
+        letter-spacing: 0.32px;
+        padding-left: 20px;
+        border: none;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) { 
+            width: 200px;
+        } 
+
+        @media (max-width: 480px) {
+            width: 100%;
+        }
+    }
+}
+
+.conlusion_input__hidden {
+    @media (max-width: 480px) {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+.finance__wallet, .underline, .finance__list, .support__item__header, .finance-table  {
     margin-left: 37px;
 
     @media (max-width: 480px) {
         margin-left: 20px;
     }
 }
-
-
 .support__item {
     display: flex;
     flex-direction: column;

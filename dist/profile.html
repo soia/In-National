@@ -230,13 +230,13 @@
                     <div class="profile_wrapper">
                         <div class="photo">
                             <div class="img">
-                                <img src="./assets/img/none_photo.png" alt="avatar-preview" class="avatar-preview">
+                                <img src="./assets/img/none_photo.png" alt="avatar-preview" class="avatar-preview jsAvatar" id="uploadedImageThird" data-standart-image="./assets/img/none_photo.png">
                                 <form id="#" enctype="multipart/form-data" method="post">
-                                    <input type="file" id="file-input" name="photo_file" style="display: none;" accept=".jpg">
+                                    <input type="file" id="uploadThird" name="photo_file" style="display: none;" accept=".jpg">
                                 </form>
                             </div>
                             <div class="wrapper__upload-delete">
-                                <a href="#" class="photo-change"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                <a href="#" class="photo-change" id="uploadPhotoThird"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
                                         <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
                                         <title>upload</title>
@@ -251,8 +251,7 @@
                                             </g>
                                         </g>
                                     </svg></a>
-
-                                <a href="#" class="remove-avatar"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                <a href="#" class="remove-avatar" id="remove-avatar"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
                                         <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
                                         <title>delete</title>
@@ -267,7 +266,9 @@
                                                     id="Path-4" />
                                             </g>
                                         </g>
-                                    </svg></a>
+                                    </svg>
+                                    <input type="checkbox" id="avatarCheckbox">
+                                </a>
                             </div>
                         </div>
                         <div class="personal_information">

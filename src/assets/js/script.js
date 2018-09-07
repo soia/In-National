@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
   "use strict";
 
   window.nationalPay = $.extend(
@@ -10,7 +10,7 @@
       preloader: $(".preloader"),
       modalWindow: $(".modal"),
 
-      init: function() {
+      init: function () {
         nationalPay.initHeader();
         nationalPay.initLeftHeader();
         nationalPay.initTableDropdown();
@@ -24,7 +24,7 @@
         nationalPay.initImagePreviewSecond();
         nationalPay.initImagePreviewThird();
       },
-      initHeader: function() {
+      initHeader: function () {
         let main = $("main"),
           mainHeader = $("#mainHeader"),
           openAside = $("#openHeaderAside"),
@@ -34,16 +34,16 @@
           mainHeader.removeClass("aside_visible");
           main.removeClass("aside_visible");
         }
-        openAside.on("click", function() {
+        openAside.on("click", function () {
           mainHeader.addClass("aside_visible");
           main.addClass("aside_visible");
         });
-        closeAside.on("click", function() {
+        closeAside.on("click", function () {
           mainHeader.removeClass("aside_visible");
           main.removeClass("aside_visible");
         });
       },
-      initLeftHeader: function() {
+      initLeftHeader: function () {
         let main = $("#main_header__left"),
           mainHeader = $("#main_header__left"),
           openAside = $("#openHeaderAside"),
@@ -53,21 +53,21 @@
           mainHeader.removeClass("aside_visible");
           main.removeClass("aside_visible");
         }
-        openAside.on("click", function() {
+        openAside.on("click", function () {
           mainHeader.addClass("aside_visible");
           main.addClass("aside_visible");
         });
-        closeAside.on("click", function() {
+        closeAside.on("click", function () {
           mainHeader.removeClass("aside_visible");
           main.removeClass("aside_visible");
         });
       },
-      initTableDropdown: function() {
+      initTableDropdown: function () {
         if (!$(".openSortDropdown").length) return false;
 
         let openDropdown = $(".openSortDropdown");
-        openDropdown.each(function() {
-          $(this).on("click", function() {
+        openDropdown.each(function () {
+          $(this).on("click", function () {
             $(this).toggleClass("drop_opened");
             $(this)
               .parent("th")
@@ -75,18 +75,18 @@
           });
         });
       },
-      initSupportInfo: function() {
+      initSupportInfo: function () {
         if (!$(".showInfo").length) return false;
         let showInfo = $(".showInfo"),
           hideInfo = $(".hideInfo");
-        showInfo.each(function() {
-          $(this).on("click", function() {
+        showInfo.each(function () {
+          $(this).on("click", function () {
             $(this).addClass("showInfo__visible");
             $(this).removeClass("transparent");
           });
         });
-        hideInfo.each(function(e) {
-          $(this).on("click", function(e) {
+        hideInfo.each(function (e) {
+          $(this).on("click", function (e) {
             $(this)
               .closest(showInfo)
               .removeClass("showInfo__visible");
@@ -97,46 +97,46 @@
           });
         });
       },
-      initUploadPhoto: function(e) {
+      initUploadPhoto: function (e) {
         if (!$("#uploadPhoto").length) return false;
         let uploadPhoto = $("#uploadPhoto"),
           hiddenInput = $("#upload");
-        uploadPhoto.on("click", function() {
+        $(document).on("click", '#uploadPhoto', function () {
           document.querySelector("input#upload").click();
         });
       },
-      initUploadPhotoSecond: function(e) {
+      initUploadPhotoSecond: function (e) {
         if (!$("#uploadPhotoSecond").length) return false;
         let uploadPhoto = $("#uploadPhotoSecond"),
           hiddenInput = $("#uploadSecond");
-        uploadPhoto.on("click", function() {
+        $(document).on("click", '#uploadPhotoSecond', function () {
           document.querySelector("input#uploadSecond").click();
         });
       },
-      initUploadPhotoThird: function(e) {
+      initUploadPhotoThird: function (e) {
         if (!$("#uploadPhotoThird").length) return false;
         let uploadPhoto = $("#uploadPhotoThird"),
           hiddenInput = $("#uploadThird");
-        uploadPhoto.on("click", function() {
+        $(document).on("click", '#uploadPhotoThird', function () {
           document.querySelector("input#uploadThird").click();
         });
       },
-      initCustomSelect: function() {
+      initCustomSelect: function () {
         if (!$(".custom_select").length) return false;
         let toggleSelect = $(".toggleSelect"),
           selectOption = $(".selectOption"),
           showOptions = $(".showOptions"),
           hideOptions = $(".hideOptions");
 
-        toggleSelect.each(function() {
-          $(this).on("click", function() {
+        toggleSelect.each(function () {
+          $(this).on("click", function () {
             $(this)
               .closest(".custom_select")
               .toggleClass("opened");
           });
         });
-        selectOption.each(function() {
-          $(this).on("click", function() {
+        selectOption.each(function () {
+          $(this).on("click", function () {
             let newCurrency = $(this).attr("data-currency"),
               prevCurrency = $(this)
                 .closest(".custom_select")
@@ -157,7 +157,7 @@
         });
 
         function refreshItemData(item) {
-          item.each(function() {
+          item.each(function () {
             if ($(this).attr("data-choosen")) {
               let data = $(this).attr("data-choosen");
               $(this)
@@ -175,7 +175,7 @@
       initImagePreview() {
         if (!$("#upload").length) return false;
 
-        $("#upload").change(function() {
+        $("#upload").change(function () {
           readURL(this);
           $("#uploadPhoto")
             .find("svg")
@@ -188,7 +188,7 @@
         function readURL(input) {
           if (input.files && input.files[0]) {
             var reader = new FileReader();
-            reader.onload = function(e) {
+            reader.onload = function (e) {
               $("#uploadedImage").attr("src", e.target.result);
             };
             reader.readAsDataURL(input.files[0]);
@@ -198,7 +198,7 @@
       initImagePreviewSecond() {
         if (!$("#uploadSecond").length) return false;
 
-        $("#uploadSecond").change(function() {
+        $("#uploadSecond").change(function () {
           readURL(this);
           $("#uploadPhotoSecond")
             .find("svg")
@@ -211,7 +211,7 @@
         function readURL(input) {
           if (input.files && input.files[0]) {
             var reader = new FileReader();
-            reader.onload = function(e) {
+            reader.onload = function (e) {
               $("#uploadedImageSecond").attr("src", e.target.result);
             };
             reader.readAsDataURL(input.files[0]);
@@ -221,14 +221,14 @@
       initImagePreviewThird() {
         if (!$("#uploadThird").length) return false;
 
-        $("#uploadThird").change(function() {
+        $("#uploadThird").change(function () {
           readURL(this);
         });
 
         function readURL(input) {
           if (input.files && input.files[0]) {
             var reader = new FileReader();
-            reader.onload = function(e) {
+            reader.onload = function (e) {
               $("#uploadedImageThird").attr("src", e.target.result);
             };
             reader.readAsDataURL(input.files[0]);
@@ -240,17 +240,17 @@
         const defaultImgSrc = $(".jsAvatar").data("standart-image");
         let removeAva = $("#remove-avatar");
         let checked = document.getElementById("remove-avatar");
-        checked.onclick = function() {
+        checked.onclick = function () {
           document.getElementById("avatarCheckbox").checked = !0;
         };
 
-        removeAva.on("click", function() {
+        removeAva.on("click", function () {
           $("#uploadedImageThird").attr("src", defaultImgSrc);
         });
       }
     }
   );
-  $(document).ready(function() {
+  $(document).ready(function () {
     nationalPay.init();
   });
 })(jQuery);
@@ -270,8 +270,8 @@ function showPopup(obj) {
 }
 
 // slick slider
-$(document).ready(function() {
-  $(".autoplay").each(function(index, item) {
+$(document).ready(function () {
+  $(".autoplay").each(function (index, item) {
     var slidesToShow = 5;
     var childElements = $(item).children().length;
     console.log(childElements);
@@ -333,7 +333,7 @@ $(document).ready(function() {
 });
 
 //clip board
-document.getElementById("copyButton").addEventListener("click", function() {
+document.getElementById("copyButton").addEventListener("click", function () {
   copyToClipboard(document.getElementById("copyTarget"));
 });
 

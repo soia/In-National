@@ -397,7 +397,6 @@ main {
 
 .upload_photo_wrap {
     #uploadPhoto {
-        width: 67%;
         height: 125px;
         border-radius: 10px;
         cursor: pointer;
@@ -407,6 +406,7 @@ main {
         align-items: center;
         justify-content: center;
         position: relative;
+        background-color: #fff;
 
         @media (max-width: 480px) {
             width: 85%;
@@ -457,7 +457,6 @@ main {
 
 .upload_photo_wrap {
     #uploadPhotoSecond { 
-        width: 67%;
         height: 125px;
         border-radius: 10px;
         cursor: pointer;
@@ -467,6 +466,7 @@ main {
         align-items: center;
         justify-content: center;
         position: relative;
+        background-color: #fff;
 
         @media (max-width: 480px) {
             width: 85%;

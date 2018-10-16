@@ -6,15 +6,35 @@
     font-family: "Core Sans G", sans-serif;
     font-size: 15px;
     line-height: 21px;
+
+    @media (max-width: 480px) {
+        display: none;
+    }
 }
 
 .wrapper-speaker {
     padding-left: 40px;
 
+    @media (max-width: 480px) {
+        padding-left: 0;
+    }
+
     &__top {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        @media (max-width: 1024px) {
+            div:nth-child(3) {
+                margin-top: 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            div:nth-child(3) {
+                margin-top: 0;
+            }
+        }
     }
 
     &__link,
@@ -22,13 +42,34 @@
         max-width: 270px;
         width: 100%;
         margin-right: 20px;
+        @media (max-width: 768px) {
+            max-width: 215px;
+        }
+
+        @media (max-width: 480px) {
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
     }
+
+    &__link {
+        @media (max-width: 768px) {
+            margin-right: 0;
+        }
+    }
+
 
     &__title {
         color: #2e2e2e;
         font-family: "Core Sans G", sans-serif;
         font-size: 18px;
         line-height: 21px;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+            margin-top: 0;
+        }
     }
 
     &__form_input {
@@ -46,17 +87,32 @@
     }
 
     &__warning {
-        color: red;
+        color: red !important;
     }
 
     &__download {
 
-       .photo-change svg {
+       .photo-change {
+            width: 36px;
+            height: 36px;
+            display: inline-block;
             margin-left: 15px;
+
+            @media (max-width: 480px) {
+                margin: 0 15px 20px 0;
+            }
         }
 
-        .photo-change .margin-reset {
+        .margin-reset {
             margin-left: 0;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 0;
         }
     }
 
@@ -89,6 +145,18 @@
         }
     }
 
+    &__s-h-pass {
+        text-align: right;
+        display: block;
+        margin-top: 10px;
+        color: #9b9b9b;
+        font-family: "Core Sans G", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        cursor: pointer;
+    }
+
     &__submit {
         width: 120px;
         height: 36px;
@@ -109,4 +177,8 @@
 
 .margin-top {
     margin-top: 45px;
+
+    @media (max-width: 480px) {
+        margin-top: 0;
+    }
 }

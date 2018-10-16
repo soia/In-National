@@ -23,6 +23,9 @@
       nationalPay.initImagePreview();
       nationalPay.initImagePreviewSecond();
       nationalPay.initImagePreviewThird();
+      nationalPay.initTextAreaLength();
+      nationalPay.initShowPassword();
+
     },
     initHeader: function () {
       let main = $("main"),
@@ -147,9 +150,9 @@
         $(this).on("click", function () {
           let newCurrency = $(this).attr("data-currency"),
             prevCurrency = $(this)
-            .closest(".custom_select")
-            .find(".custom_select__choosen")
-            .attr("data-choosen");
+              .closest(".custom_select")
+              .find(".custom_select__choosen")
+              .attr("data-choosen");
 
           $(this)
             .closest(".custom_select")
@@ -257,17 +260,45 @@
     //   });
     // }
     initImageDownload() {
-      if (!$(".uploadFourth").length) return false;
-
-      $(".uploadFourth").change(function (event) {
-        $(".uploadPhotoFourth")
-          .find(".download-svg")
-          .hide();
-        $(".uploadPhotoFourth")
-          .find(".done-svg")
-          .show();
+      $(".uploadFourth").change(function () {
+        $(this).parent('.photo-change').find('.download-svg').hide();
+        $(this).parent('.photo-change').find('.done-svg').show();
       });
-    }
+    },
+
+    initUploadPhotoFourth: function () {
+      const uploadBtn = $('.startDownload');
+      uploadBtn.each(function () {
+        $(this).on('click', function () {
+          $(this).parent('.photo-change').find('.uploadFourth').trigger('click')
+        })
+      });
+    },
+
+    initTextAreaLength: function () {
+      $('.textareaField').keyup(function () {
+        var maxLength = $(this).attr('maxlength');
+        var curLength = $(this).val().length;
+        $(this).val($(this).val().substr(0, maxLength));
+        var remaning = maxLength - curLength;
+        if (remaning < 0) remaning = 0;
+        $('.textareaFeedback').html('Cимволы ' + remaning + ' /1024');
+        if (remaning < 10) {
+          $('.textareaFeedback').addClass('wrapper-speaker__warning')
+        } else {
+          $('.textareaFeedback').removeClass('wrapper-speaker__warning')
+        }
+      });
+    },
+
+    initShowPassword: function () {
+      $('#s-h-pass').click(function () {
+        var type = $('#compensation-password').attr('type') == "password" ? "text" : 'password',
+          title = $(this).text() == "Скрыть пароль" ? "Показать пароль" : "Скрыть пароль";
+        $(this).text(title);
+        $('#compensation-password').prop('type', type);
+      });
+    },
   });
   $(document).ready(function () {
     nationalPay.init();
@@ -303,33 +334,33 @@ $(document).ready(function () {
       slidesToShow: slidesToShow,
       slidesToScroll: 1,
       responsive: [{
-          breakpoint: 1366,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 1023,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 1022,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
+        breakpoint: 1366,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
         }
+      },
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 1022,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
       ]
     });
   });
@@ -346,26 +377,11 @@ $(document).ready(function () {
       }
     }]
   });
-
-  $(function () {
-    $('.textareaField').keyup(function () {
-      var maxLength = $(this).attr('maxlength');
-      var curLength = $(this).val().length;
-      $(this).val($(this).val().substr(0, maxLength));
-      var remaning = maxLength - curLength;
-      if (remaning < 0) remaning = 0;
-      $('.textareaFeedback').html('Cимволы ' + remaning + ' /1024');
-      if (remaning < 10) {
-        $('.textareaFeedback').addClass('wrapper-speaker__warning')
-      } else {
-        $('.textareaFeedback').removeClass('wrapper-speaker__warning')
-      }
-    });
-  });
 });
 
 //clip board
 document.getElementById("copyButton").addEventListener("click", function () {
+
   copyToClipboard(document.getElementById("copyTarget"));
 });
 

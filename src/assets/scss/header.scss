@@ -449,12 +449,41 @@
     display: block;
 }
 
+.speaker-bonus-fixed {
+    width: 61px;
+    height: 219px;
+    border-radius: 6px;
+    background-color: #4247f3;
+    right: 0.55;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    box-shadow: 0 0 20px #4247f3;
+    transform: translateY(-50%);
 
+    a {
+        height: 100%;
+        width: 100%;
+        writing-mode: tb;
+        transform: rotate(180deg);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-family: "Core Sans G", sans-serif;
+        font-size: 18px;
+        line-height: 21px;
+    }
 
+    svg {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        transform: translateY(25px);
+    }
 
-// .main_header__left__burger__icon {
-//     display: flex;
-//     cursor: pointer;
-//     position: absolute;
-//     @include svgHover;
-// }
+    @media screen and (max-width: 768px) { 
+        display: none;
+    } 
+}

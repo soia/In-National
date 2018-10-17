@@ -1608,3 +1608,63 @@ main {
 
 
 
+.modal-window {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &__overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #000;
+        animation: modalBgAnimation-data-v-14dd5eff 0.5s 1;
+        opacity: 0.8;
+    }
+
+    &__content {
+        position: relative;
+        background-color: #fff;
+        max-width: 795px;
+        min-height: 183px;
+        padding: 50px 100px 50px;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0 auto;
+        transition: 0.45s ease-in-out;
+        animation: modalContentAnimation-data-v-14dd5eff 0.8s 1;
+        top: 50%;
+        transform: translateY(-50%);
+
+        h4 {
+            color: #2e2e2e;
+            font-family: "Core Sans G", sans-serif;
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+        p {
+            color: #787993;
+            font-family: "Core Sans G", sans-serif;
+            font-size: 14px;
+            line-height: 14px;
+        }
+
+        svg {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            cursor: pointer;
+            padding: 10px;
+        }
+    }
+}
